@@ -1,0 +1,963 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #164fc7; -webkit-text-stroke: #164fc7}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #855504; -webkit-text-stroke: #855504}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #115d3e; -webkit-text-stroke: #115d3e}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #2e3133; -webkit-text-stroke: #2e3133}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #2e3133; -webkit-text-stroke: #2e3133; min-height: 16.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #888f95; -webkit-text-stroke: #888f95}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6624a5; -webkit-text-stroke: #6624a5}
+    span.s1 {font-kerning: none; background-color: #ffffff}
+    span.s2 {font-kerning: none; color: #2e3133; background-color: #ffffff; -webkit-text-stroke: 0px #2e3133}
+    span.s3 {font-kerning: none; color: #4d5055; background-color: #ffffff; -webkit-text-stroke: 0px #4d5055}
+    span.s4 {font-kerning: none; color: #855504; background-color: #ffffff; -webkit-text-stroke: 0px #855504}
+    span.s5 {font-kerning: none; color: #115d3e; background-color: #ffffff; -webkit-text-stroke: 0px #115d3e}
+    span.s6 {font-kerning: none; color: #164fc7; background-color: #ffffff; -webkit-text-stroke: 0px #164fc7}
+    span.s7 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;</span><span class="s1">html</span><span class="s2"> </span><span class="s4">lang</span><span class="s3">=</span><span class="s5">"ko"</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s2"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s2"> </span><span class="s4">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s2"> </span><span class="s4">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">급식 정보 알리미</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- Tailwind CSS CDN --&gt;</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s2"> </span><span class="s4">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>tailwind</span><span class="s3">.</span><span class="s1">config </span><span class="s3">=</span><span class="s1"> </span><span class="s3">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>darkMode</span><span class="s3">:</span><span class="s1"> </span><span class="s5">'class'</span><span class="s3">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>theme</span><span class="s3">:</span><span class="s1"> </span><span class="s3">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>extend</span><span class="s3">:</span><span class="s1"> </span><span class="s3">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>fontFamily</span><span class="s3">:</span><span class="s1"> </span><span class="s3">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>gungsuh</span><span class="s3">:</span><span class="s1"> </span><span class="s3">[</span><span class="s5">'Gungsuh'</span><span class="s3">,</span><span class="s1"> </span><span class="s5">'궁서'</span><span class="s3">,</span><span class="s1"> </span><span class="s5">'serif'</span><span class="s3">],</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s3">}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s3">}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- React 및 Babel CDN --&gt;</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s2"> </span><span class="s4">src</span><span class="s3">=</span><span class="s1">"https://unpkg.com/react@18/umd/react.development.js"</span><span class="s2"> </span><span class="s4">crossorigin</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s2"> </span><span class="s4">src</span><span class="s3">=</span><span class="s1">"https://unpkg.com/react-dom@18/umd/react-dom.development.js"</span><span class="s2"> </span><span class="s4">crossorigin</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s2"> </span><span class="s4">src</span><span class="s3">=</span><span class="s1">"https://unpkg.com/@babel/standalone/babel.min.js"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">@keyframes</span><span class="s2"> </span><span class="s5">fall</span><span class="s2"> </span><span class="s3">{</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">0%</span><span class="s2"> </span><span class="s3">{</span><span class="s2"> </span><span class="s4">transform:</span><span class="s2"> </span><span class="s1">translateY(-20px)</span><span class="s2"> </span><span class="s1">rotate(0deg)</span><span class="s3">;</span><span class="s2"> </span><span class="s3">}</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">100%</span><span class="s2"> </span><span class="s3">{</span><span class="s2"> </span><span class="s4">transform:</span><span class="s2"> </span><span class="s1">translateY(110vh)</span><span class="s2"> </span><span class="s1">rotate(360deg)</span><span class="s3">;</span><span class="s2"> </span><span class="s3">}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">.animate-snow</span><span class="s2"> </span><span class="s3">{</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s4">animation:</span><span class="s2"> </span><span class="s1">fall</span><span class="s2"> </span><span class="s1">6s</span><span class="s2"> </span><span class="s1">linear</span><span class="s2"> </span><span class="s1">infinite</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">}</span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">/* 스크롤바 커스텀 */</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">.custom-scrollbar::-webkit-scrollbar</span><span class="s2"> </span><span class="s3">{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s4">width:</span><span class="s1"> </span><span class="s5">6px</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">.custom-scrollbar::-webkit-scrollbar-track</span><span class="s2"> </span><span class="s3">{</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">background:</span><span class="s2"> </span><span class="s5">transparent</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">.custom-scrollbar::-webkit-scrollbar-thumb</span><span class="s2"> </span><span class="s3">{</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">background:</span><span class="s2"> </span><span class="s5">#cbd5e1</span><span class="s3">;</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">border-radius:</span><span class="s2"> </span><span class="s5">3px</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">.dark</span><span class="s2"> </span><span class="s1">.custom-scrollbar::-webkit-scrollbar-thumb</span><span class="s2"> </span><span class="s3">{</span></p>
+<p class="p2"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1">background:</span><span class="s2"> </span><span class="s5">#475569</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;</span><span class="s6">body</span><span class="s2"> </span><span class="s4">class</span><span class="s3">=</span><span class="s1">"bg-gray-100 dark:bg-slate-950 transition-colors duration-500"</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s2"> </span><span class="s4">id</span><span class="s3">=</span><span class="s1">"root"</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- React 컴포넌트 소스 --&gt;</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s2"> </span><span class="s4">type</span><span class="s3">=</span><span class="s1">"text/babel"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>const { useState, useEffect, useRef } = React;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>// 외부 Lucide 라이브러리 상태에 영향받지 않는 100% 순수 인라인 SVG 아이콘 컴포넌트</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>const Icon = ({ name, size = 24, strokeWidth = 1.5, className = "", fill = "none" }) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const paths = {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>settings: (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;circle cx="12" cy="12" r="3" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>school: (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="m22 10-10-5L2 10l10 5Z" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>trophy: (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M4 22h16" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M12 2a6 6 0 0 0-6 6v1c0 2.2 1.8 4 4 4h4c2.2 0 4-1.8 4-4V8a6 6 0 0 0-6-6z" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>'chevron-left': &lt;path d="m15 18-6-6 6-6" /&gt;,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>'chevron-right': &lt;path d="m9 18 6-6-6-6" /&gt;,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>moon: &lt;path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /&gt;,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>sun: (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;circle cx="12" cy="12" r="4" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M12 2v2M12 20v2M4.93 4.93 1.41 1.41M17.66 17.66 1.41 1.41M2 12h2M20 12h2M6.34 17.66-1.41 1.41M19.07 4.93-1.41 1.41" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>plus: &lt;path d="M5 12h14M12 5v14" /&gt;,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>'trash-2': (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M3 6h18M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;line x1="10" x2="10" y1="11" y2="17" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;line x1="14" x2="14" y1="11" y2="17" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>'loader-2': &lt;path d="M21 12a9 9 0 1 1-6.219-8.56" /&gt;,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>'refresh-cw': (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M16 3h5v5" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M8 21H3v-5" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>star: &lt;polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /&gt;,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>'bell-ring': (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M4 2C2.8 3.7 2 5.7 2 8" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M22 8c0-2.3-.8-4.3-2-6" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>search: (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;circle cx="11" cy="11" r="8" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="m21 21-4.3-4.3" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>'check-circle-2': (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;circle cx="12" cy="12" r="10" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="m9 12 2 2 4-4" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>'map-pin': (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;circle cx="12" cy="12" r="3" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>flame: &lt;path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /&gt;,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>check: &lt;path d="M20 6 9 17l-5-5" /&gt;,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>award: (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;circle cx="12" cy="8" r="7" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>'calendar-days': (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;rect width="18" height="18" x="3" y="4" rx="2" ry="2" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;line x1="16" x2="16" y1="2" y2="6" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;line x1="8" x2="8" y1="2" y2="6" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;line x1="3" x2="21" y1="10" y2="10" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>clock: (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;circle cx="12" cy="12" r="10" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;polyline points="12 6 12 12 16 14" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>x: &lt;path d="M18 6 6 18M6 6l12 12" /&gt;,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>utensils: (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v4M12 15v7M9 15v7" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M17 12h-3V2a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v10Z" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;path d="M17 15v7" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/g&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>)</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const kebabName = name</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>.replace(/([a-z0-9])([A-Z])/g, '$1-$2')</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>.replace(/([a-zA-Z])([0-9])/g, '$1-$2')</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>.toLowerCase();</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const renderedPath = paths[kebabName] || null;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>return (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;svg<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>xmlns="http://www.w3.org/2000/svg"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>width={size}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>height={size}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>viewBox="0 0 24 24"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>fill={fill}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>stroke="currentColor"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>strokeWidth={strokeWidth}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>strokeLinecap="round"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>strokeLinejoin="round"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>className={`lucide lucide-${kebabName} ${className} ${kebabName === 'loader-2' ? 'animate-spin' : ''}`}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{renderedPath}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>const App = () =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [activeTab, setActiveTab] = useState('school');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [darkMode, setDarkMode] = useState(false);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [selectedDate, setSelectedDate] = useState(new Date());</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>// 기념일 체크 로직 (실제 오늘 기준)</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const today = new Date();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const tMonth = today.getMonth() + 1;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const tDate = today.getDate();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const tYear = today.getFullYear();</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const isHangeulDay = tMonth === 10 &amp;&amp; tDate === 9;<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const isChildrensDay = tMonth === 5 &amp;&amp; tDate === 5;<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const isChristmas = tMonth === 12 &amp;&amp; tDate === 25;<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const isIndepDay = tMonth === 3 &amp;&amp; tDate === 1;<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const isNewYear = tMonth === 1 &amp;&amp; tDate === 1;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const isAprilFools = tMonth === 4 &amp;&amp; tDate === 1;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [isExploded, setIsExploded] = useState(false);</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>// 학교 및 급식 상태</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [regionCode, setRegionCode] = useState("");</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [schoolNameInput, setSchoolNameInput] = useState("");</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [searchResults, setSearchResults] = useState([]);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [isSearching, setIsSearching] = useState(false);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [mySchool, setMySchool] = useState(null);<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [mealData, setMealData] = useState(null);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [isLoadingMeal, setIsLoadingMeal] = useState(false);</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>// 음식 상세 모달 상태 (AI 이미지 관련 변수 및 상태 전면 제거)</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [selectedFood, setSelectedFood] = useState(null);</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>// 주말 및 휴일 대체 추천 상태 (AI 이미지 관련 변수 및 상태 전면 제거)</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [recommendation, setRecommendation] = useState(null);</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>// 도전(챌린지) 상태</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [streak, setStreak] = useState(0);<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [lastClearDate, setLastClearDate] = useState(null);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [userChallenges, setUserChallenges] = useState([</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>{ id: 1, title: "급식 남기지 않기", isDefault: true, completedToday: false }</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>]);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [newChallengeTitle, setNewChallengeTitle] = useState("");</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>// D-Day 상태</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [ddays, setDdays] = useState([</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>{ id: 1, title: "기말고사", date: "2026-07-01" },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>{ id: 2, title: "여름방학", date: "2026-07-20" }</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>]);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [newDdayTitle, setNewDdayTitle] = useState("");</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [newDdayDate, setNewDdayDate] = useState("");</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>// 선호 메뉴 상태</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [favoriteFoods, setFavoriteFoods] = useState(["치킨", "마라탕", "돈가스"]);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const [newFoodInput, setNewFoodInput] = useState("");</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const allergyMap = {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>"1": "난류", "2": "우유", "3": "메밀", "4": "땅콩", "5": "대두",</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>"6": "밀", "7": "고등어", "8": "게", "9": "새우", "10": "돼지고기",</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>"11": "복숭아", "12": "토마토", "13": "아황산류", "14": "호두", "15": "닭고기",</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>"16": "쇠고기", "17": "오징어", "18": "조개류", "19": "잣"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const lunchMenus = ["치킨까스", "마라탕", "떡볶이", "치즈버거", "짜장면", "제육덮밥", "쌀국수", "연어초밥", "토마토 파스타"];</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>// 다크모드 동적 클래스 토글</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>useEffect(() =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>if (darkMode) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>document.documentElement.classList.add('dark');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>document.documentElement.classList.remove('dark');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>}, [darkMode]);</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const getAllergyStyle = (name) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const palette = [</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{ bg: 'bg-rose-100 text-rose-600 dark:bg-rose-950/40 dark:text-rose-400 border-rose-200 dark:border-rose-900/50' },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{ bg: 'bg-sky-100 text-sky-600 dark:bg-sky-950/40 dark:text-sky-400 border-sky-200 dark:border-sky-900/50' },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{ bg: 'bg-emerald-100 text-emerald-600 dark:bg-emerald-950/40 dark:text-emerald-400 border-emerald-200 dark:border-emerald-900/50' },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{ bg: 'bg-amber-100 text-amber-600 dark:bg-amber-950/40 dark:text-amber-400 border-amber-200 dark:border-amber-900/50' },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{ bg: 'bg-violet-100 text-violet-600 dark:bg-violet-950/40 dark:text-violet-400 border-violet-200 dark:border-violet-900/50' },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{ bg: 'bg-orange-100 text-orange-600 dark:bg-orange-950/40 dark:text-orange-400 border-orange-200 dark:border-orange-900/50' },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const hash = name.split('').reduce((acc, char) =&gt; acc + char.charCodeAt(0), 0);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>return palette[hash % palette.length];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const regions = [</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>{ name: "서울", code: "B10" }, { name: "부산", code: "C10" }, { name: "대구", code: "D10" },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>{ name: "인천", code: "E10" }, { name: "광주", code: "F10" }, { name: "대전", code: "G10" },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>{ name: "울산", code: "H10" }, { name: "세종", code: "I10" }, { name: "경기", code: "J10" },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>{ name: "강원", code: "K10" }, { name: "충북", code: "M10" }, { name: "충남", code: "N10" },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>{ name: "전북", code: "P10" }, { name: "전남", code: "Q10" }, { name: "경북", code: "R10" },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>{ name: "경남", code: "S10" }, { name: "제주", code: "T10" }</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>];</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const convertAllergyToArray = (allergyString) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>if (!allergyString) return [];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const numbers = allergyString.match(/\d+/g);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>return numbers ? numbers.map(num =&gt; allergyMap[num] || num) : [];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const calculateDday = (targetDate) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const todayDate = new Date();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>todayDate.setHours(0, 0, 0, 0);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const target = new Date(targetDate);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>target.setHours(0, 0, 0, 0);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const diffTime = target - todayDate;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>if (diffDays === 0) return "D-Day";</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>return diffDays &gt; 0 ? `D-${diffDays}` : `D+${Math.abs(diffDays)}`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const openFoodModal = (item) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setSelectedFood(item);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const searchSchool = async () =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>if (!regionCode || !schoolNameInput) return;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setIsSearching(true);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setSearchResults([]);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>try {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>const url = `https://open.neis.go.kr/hub/schoolInfo?Type=json&amp;pIndex=1&amp;pSize=20&amp;ATPT_OFCDC_SC_CODE=${regionCode}&amp;SCHUL_NM=${encodeURIComponent(schoolNameInput)}`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>const response = await fetch(url);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>const data = await response.json();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>if (data.schoolInfo) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>setSearchResults(data.schoolInfo[1].row.map(item =&gt; ({</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>name: item.SCHUL_NM,<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>code: item.SD_SCHUL_CODE,<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>officeCode: item.ATPT_OFCDC_SC_CODE,<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>address: item.ORG_RDNMA,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>type: item.SCHUL_KND_SC_NM</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>})));</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>} catch (e) { console.error(e); }</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setIsSearching(false);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const fetchMeal = async () =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>if (!mySchool) return;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setIsLoadingMeal(true);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setRecommendation(null);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const dateStr = selectedDate.toISOString().split('T')[0].replace(/-/g, '');</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>try {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>const url = `https://open.neis.go.kr/hub/mealServiceDietInfo?Type=json&amp;ATPT_OFCDC_SC_CODE=${mySchool.officeCode}&amp;SD_SCHUL_CODE=${mySchool.code}&amp;MLSV_YMD=${dateStr}`;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>const response = await fetch(url);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>const data = await response.json();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>if (data.mealServiceDietInfo) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const rawMeal = data.mealServiceDietInfo[1].row[0].DDISH_NM;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const items = rawMeal.split('&lt;br/&gt;').map(item =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>const match = item.match(/(.*?)\s*\(([\d.]+)\)/);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>return match<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>? { name: match[1].trim(), allergies: convertAllergyToArray(match[2]) }</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>: { name: item.trim(), allergies: [] };</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>setMealData({ items, calorie: data.mealServiceDietInfo[1].row[0].CAL_INFO });</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>} else {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>setMealData(null);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>// 식단이 없거나 주말인 경우 텍스트 추천 메뉴 설정</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const day = selectedDate.getDay();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>if (day === 0 || day === 6 || !data.mealServiceDietInfo) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>const randomPick = lunchMenus[Math.floor(Math.random() * lunchMenus.length)];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>setRecommendation({ name: randomPick });</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>} catch (e) { setMealData(null); }</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setIsLoadingMeal(false);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>useEffect(() =&gt; { fetchMeal(); }, [mySchool, selectedDate]);</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const toggleChallenge = (id) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>const todayStr = new Date().toDateString();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setUserChallenges(userChallenges.map(c =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>if (c.id === id) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>const newState = !c.completedToday;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>if (c.isDefault &amp;&amp; newState) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>if (lastClearDate !== todayStr) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setStreak(prev =&gt; prev + 1);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setLastClearDate(todayStr);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>} else if (c.isDefault &amp;&amp; !newState) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>if (lastClearDate === todayStr) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setStreak(prev =&gt; Math.max(0, prev - 1));</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>setLastClearDate(null);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>return { ...c, completedToday: newState };</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>return c;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}));</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const addChallenge = () =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>if (!newChallengeTitle.trim()) return;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setUserChallenges([...userChallenges, {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>id: Date.now(),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>title: newChallengeTitle,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>isDefault: false,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>completedToday: false</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}]);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setNewChallengeTitle("");</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const addDday = () =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>if (!newDdayTitle.trim() || !newDdayDate) return;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setDdays([...ddays, {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>id: Date.now(),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>title: newDdayTitle,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>date: newDdayDate</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}]);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setNewDdayTitle("");</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>setNewDdayDate("");</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const hasFavorite = mealData?.items?.some(item =&gt;<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>favoriteFoods.some(fav =&gt; item.name.includes(fav))</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>);</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>// 오늘 식단에 나오는 최애 메뉴들 목록 추출</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const matchingFavorites = mealData?.items</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>?.filter(item =&gt; favoriteFoods.some(fav =&gt; item.name.includes(fav)))</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>?.map(item =&gt; item.name);</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>// 만우절용 탭 차단</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>const handleTabSwitch = (target) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>if (isAprilFools &amp;&amp; Math.random() &lt; 0.5) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>setIsExploded(true);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>setActiveTab(target);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>return (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div className={`min-h-screen max-w-md mx-auto relative overflow-hidden transition-all duration-500 shadow-2xl pb-16</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>${darkMode ? 'bg-slate-900 text-white' : 'bg-slate-50 text-gray-800'} ${isHangeulDay ? 'font-serif' : 'font-sans'}`}&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{/* 기념일 효과 레이어 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div className="absolute inset-0 pointer-events-none z-0"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{isChildrensDay &amp;&amp; Array.from({length: 12}).map((_, i) =&gt; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div key={i} className="absolute bottom-[-100px] animate-bounce opacity-30" style={{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>left: `${Math.random() * 100}%`,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>animationDuration: `${3 + Math.random() * 3}s`,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>animationDelay: `${Math.random() * 2}s`</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>}}&gt;&lt;div className={`w-8 h-10 rounded-full ${['bg-red-400', 'bg-yellow-400', 'bg-blue-400'][i%3]}`}&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>))}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{isChristmas &amp;&amp; Array.from({length: 20}).map((_, i) =&gt; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div key={i} className="absolute top-[-20px] text-blue-200/40 animate-snow" style={{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>left: `${Math.random() * 100}%`,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>animationDuration: `${5 + Math.random() * 5}s`,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>animationDelay: `${Math.random() * 5}s`</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>}}&gt;❄&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>))}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{isIndepDay &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div className="absolute inset-0 flex items-center justify-center opacity-[0.05]"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                 </span>&lt;svg viewBox="0 0 100 100" className="w-64 h-64 rotate-12"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;path d="M50 20 A15 15 0 0 1 50 50 A15 15 0 0 0 50 80" stroke="#CD2E3A" fill="none" strokeWidth="6" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;path d="M50 20 A15 15 0 0 0 50 50 A15 15 0 0 1 50 80" stroke="#0047A0" fill="none" strokeWidth="6" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                 </span>&lt;/svg&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{isNewYear &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div className="absolute inset-0 flex items-center justify-center opacity-10 select-none"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span className="text-[120px] font-black text-blue-500 animate-pulse"&gt;{tYear}&lt;/span&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{/* Header */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;header className={`relative z-10 sticky top-0 border-b px-5 py-4 flex justify-between items-center transition-colors ${darkMode ? 'bg-slate-900/90 backdrop-blur-md border-slate-800' : 'bg-white/90 backdrop-blur-md border-gray-100'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div className="w-10 flex items-center justify-center"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>{isExploded ? (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button onClick={() =&gt; setIsExploded(false)} className="p-2.5 bg-indigo-600 text-white rounded-2xl shadow-lg hover:rotate-180 transition-transform duration-500"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;Icon name="RefreshCw" size={16} strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>) : hasFavorite &amp;&amp; !isLoadingMeal &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className="animate-bounce text-orange-500"&gt;&lt;Icon name="BellRing" size={20} strokeWidth={1.5} /&gt;&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1 className="text-xl font-black tracking-tight italic"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>{isHangeulDay ? '나랏밥 알리미' : activeTab === 'school' ? '오늘의 급식' : activeTab === 'settings' ? '설정' : '도전 기록'}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button onClick={() =&gt; setDarkMode(!darkMode)} className={`p-2 rounded-xl transition-colors ${darkMode ? 'bg-slate-800 text-yellow-400' : 'bg-gray-100 text-gray-400'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>{darkMode ? &lt;Icon name="Sun" size={20} strokeWidth={1.5} /&gt; : &lt;Icon name="Moon" size={20} strokeWidth={1.5} /&gt;}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/header&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">          </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;main className="relative z-10 p-5 pb-32"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{activeTab === 'school' &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div className="space-y-6"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className="flex justify-between items-start"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h2 className="text-2xl font-black"&gt;{mySchool ? mySchool.name : "학교를 먼저 설정하세요"}&lt;/h2&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p className="text-xs font-bold opacity-40 mt-1 flex items-center gap-1"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;Icon name="MapPin" size={12} strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                       </span>{mySchool?.address || "설정 탭에서 학교를 검색할 수 있습니다."}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>{streak &gt; 0 &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="flex flex-col items-end"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;div className="bg-orange-500 text-white px-3 py-1 rounded-full flex items-center gap-1 shadow-lg shadow-orange-200"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;Icon name="Flame" size={14} fill="white" strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span className="text-xs font-black"&gt;{streak}연승 중!&lt;/span&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{/* 날짜 선택 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className={`p-4 rounded-3xl shadow-sm flex items-center justify-between transition-colors ${darkMode ? 'bg-slate-800/50' : 'bg-white'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;button onClick={() =&gt; { const d = new Date(selectedDate); d.setDate(d.getDate()-1); setSelectedDate(d); }} className="p-2 text-indigo-500 hover:bg-indigo-50 rounded-full transition-colors"&gt;&lt;Icon name="ChevronLeft" size={24} strokeWidth={1.5} /&gt;&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className="text-center"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p className="text-[10px] font-black text-indigo-500 uppercase mb-0.5 tracking-widest"&gt;{isHangeulDay ? '날짜' : 'CALENDAR'}&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p className="text-lg font-bold"&gt;{selectedDate.getMonth() + 1}월 {selectedDate.getDate()}일&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;button onClick={() =&gt; { const d = new Date(selectedDate); d.setDate(d.getDate()+1); setSelectedDate(d); }} className="p-2 text-indigo-500 hover:bg-indigo-50 rounded-full transition-colors"&gt;&lt;Icon name="ChevronRight" size={24} strokeWidth={1.5} /&gt;&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{/* 프리미엄 리뉴얼: 좋아하는 메뉴 감지 알림 위젯 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{hasFavorite &amp;&amp; !isLoadingMeal &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className="relative overflow-hidden bg-gradient-to-r from-amber-500 to-orange-600 dark:from-amber-600 dark:to-orange-700 text-white p-5 rounded-[28px] shadow-lg shadow-orange-500/20 dark:shadow-none animate-in fade-in slide-in-from-top-4 duration-300 flex items-center justify-between"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{/* Glowing Backdrops */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="absolute -right-10 -top-10 w-24 h-24 bg-white/15 rounded-full blur-xl pointer-events-none"&gt;&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="absolute -left-10 -bottom-10 w-24 h-24 bg-black/15 rounded-full blur-xl pointer-events-none"&gt;&lt;/div&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="flex items-center gap-4 relative z-10 min-w-0 flex-1 mr-2"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;div className="bg-white/20 p-3 rounded-2xl backdrop-blur-md shrink-0 flex items-center justify-center"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;Icon name="Star" size={20} fill="currentColor" strokeWidth={1.5} className="text-yellow-300 animate-pulse" /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;div className="space-y-0.5 min-w-0 flex-1"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;p className="text-[10px] uppercase tracking-widest font-extrabold text-amber-200"&gt;Favorite Alert&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;h4 className="text-base font-black tracking-tight"&gt;최애 메뉴 등판 완료! ⭐&lt;/h4&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;p className="text-xs text-white/95 font-semibold truncate"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>{matchingFavorites?.join(', ')}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="bg-white/10 shrink-0 px-3 py-2 rounded-2xl text-[10px] font-black tracking-tight backdrop-blur-md border border-white/10 text-center"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>맛점시간! 😋</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>)}</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{/* 급식 카드 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className={`p-6 rounded-[32px] shadow-xl border transition-all ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-50'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className="flex justify-between items-center mb-6"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span className="bg-indigo-100 text-indigo-600 dark:bg-indigo-950/50 dark:text-indigo-300 px-4 py-1 rounded-full text-[10px] font-black tracking-widest"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>{isHangeulDay ? '오늘의 차림상' : "TODAY'S MENU"}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/span&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span className="text-gray-400 text-xs font-bold"&gt;{mealData?.calorie || ""}&lt;/span&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                  </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>{isLoadingMeal ? (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="py-12 flex justify-center"&gt;&lt;Icon name="Loader2" size={32} className="animate-spin text-indigo-500" /&gt;&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>) : mealData ? (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="space-y-5 animate-fade-in"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>{mealData.items.map((item, i) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>const isFav = favoriteFoods.some(f =&gt; item.name.includes(f));</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>return (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;div<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>key={i}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>onClick={() =&gt; openFoodModal(item)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>className="flex flex-col border-b border-gray-100 dark:border-slate-800 last:border-0 pb-4 cursor-pointer hover:opacity-75 transition-all active:scale-[0.98]"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div className="flex items-center flex-wrap gap-2 mb-2"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                               </span>&lt;p className={`text-xl font-bold ${isFav ? 'text-orange-500 underline underline-offset-4 decoration-2' : ''}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                 </span>{item.name}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                               </span>&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                               </span>{isFav ? &lt;Icon name="Star" size={18} className="fill-orange-500 text-orange-500" strokeWidth={1.5} /&gt; : &lt;Icon name="Utensils" size={14} className="text-gray-300 dark:text-gray-600" /&gt;}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{item.allergies.length &gt; 0 &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>&lt;div className="flex flex-wrap gap-1"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>{item.allergies.map((allergy, idx) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                  </span>const style = getAllergyStyle(allergy);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                  </span>return (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;span key={idx} className={`px-2.5 py-1 rounded-xl text-[10px] font-bold border ${style.bg}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                      </span>{allergy}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/span&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                  </span>)</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>})}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>})}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>) : (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="text-center py-6 space-y-4"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;p className="text-xs text-gray-400 font-bold mb-4"&gt;오늘은 맛있는 걸 자유롭게 먹으며 쉬어보세요.&lt;/p&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                      </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>{/* 추천 메뉴 섹션 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>{recommendation ? (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="animate-in zoom-in-95 duration-500 bg-gray-50 dark:bg-slate-900/50 p-5 rounded-[28px] border border-gray-100 dark:border-slate-800/80"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;p className="text-xs font-black text-indigo-600 dark:text-indigo-400 mb-2 flex items-center justify-center gap-2"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;Icon name="Utensils" size={14} className="text-indigo-500" /&gt; 오늘의 추천 메뉴</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;h4 className="text-lg font-black text-center py-1 dark:text-white"&gt;{recommendation.name}&lt;/h4&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>onClick={() =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>const randomMenu = lunchMenus[Math.floor(Math.random() * lunchMenus.length)];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>setRecommendation({ name: randomMenu });</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>}}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>className="mt-4 text-xs font-bold text-indigo-500 hover:text-indigo-600 underline block mx-auto animate-in fade-in"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>다른 거 추천받기</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>) : (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="text-center py-10 text-gray-300 dark:text-gray-600 font-black italic"&gt;식단 정보가 없습니다 😋&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>)}</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{/* 음식 상세 모달 (이미지 영역 및 관련 상태 완벽 제거) */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{selectedFood &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/60 backdrop-blur-sm transition-all animate-fade-in"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className={`relative w-full max-w-sm rounded-[36px] overflow-hidden shadow-2xl transition-all ${darkMode ? 'bg-slate-900 border border-slate-800' : 'bg-white'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>onClick={() =&gt; setSelectedFood(null)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>className="absolute top-4 right-4 z-10 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-white rounded-full transition-colors"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;Icon name="X" size={20} strokeWidth={2} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/button&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className="p-8 pt-10"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="flex items-center gap-2 mb-3"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;h3 className="text-2xl font-black"&gt;{selectedFood.name}&lt;/h3&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                       </span>{favoriteFoods.some(f =&gt; selectedFood.name.includes(f)) &amp;&amp; &lt;Icon name="Star" size={20} className="fill-orange-500 text-orange-500" /&gt;}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6"&gt;Food Info&lt;/p&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="space-y-4"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;p className="text-[10px] font-black text-indigo-500 mb-2"&gt;알레르기 정보&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="flex flex-wrap gap-1.5"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>{selectedFood.allergies &amp;&amp; selectedFood.allergies.length &gt; 0 ? selectedFood.allergies.map((a, i) =&gt; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;span key={i} className="px-3 py-1 bg-gray-100 dark:bg-slate-800 rounded-lg text-xs font-bold"&gt;{a}&lt;/span&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>)) : &lt;span className="text-xs text-gray-400 dark:text-gray-600 font-medium italic"&gt;해당 없음&lt;/span&gt;}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>onClick={() =&gt; setSelectedFood(null)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>className="w-full mt-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black shadow-lg active:scale-95 transition-all"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>확인</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>)}</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{activeTab === 'challenge' &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div className="space-y-8 animate-in slide-in-from-right-4 duration-500"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{/* 상단 통합 연승/D-Day 섹션 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div className="grid grid-cols-2 gap-4"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div className="bg-indigo-600 rounded-[32px] p-6 text-white shadow-xl shadow-indigo-100 dark:shadow-none flex flex-col justify-between aspect-square"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                     </span>&lt;p className="text-indigo-200 text-[10px] font-black uppercase tracking-widest"&gt;Streak&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                     </span>&lt;div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;h2 className="text-5xl font-black italic leading-none"&gt;{streak}&lt;/h2&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;p className="text-sm font-bold opacity-80 mt-1"&gt;연승 중!&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                     </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                     </span>&lt;Icon name="Award" size={32} className="opacity-40 self-end" strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                   </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;div className={`rounded-[32px] p-6 shadow-xl flex flex-col justify-between aspect-square transition-colors ${darkMode ? 'bg-slate-800 border border-slate-700' : 'bg-white'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                     </span>&lt;p className="text-gray-400 text-[10px] font-black uppercase tracking-widest"&gt;D-Day&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                     </span>{ddays.length &gt; 0 ? (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                         </span>&lt;h2 className="text-3xl font-black text-indigo-500"&gt;{calculateDday(ddays[0].date)}&lt;/h2&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                         </span>&lt;p className="text-xs font-bold text-gray-400 mt-1 truncate"&gt;{ddays[0].title}&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                     </span>) : (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                       </span>&lt;p className="text-xs font-bold text-gray-300 italic"&gt;일정 없음&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                     </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                     </span>&lt;Icon name="CalendarDays" size={32} className="text-indigo-500/20 self-end" strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                   </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{/* D-Day 관리 섹션 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;section className="space-y-4"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className="flex items-center gap-2 px-1"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;Icon name="Clock" size={14} className="text-indigo-500" strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3 className="text-xs font-black text-gray-400 uppercase tracking-widest"&gt;디데이 관리&lt;/h3&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className="flex flex-wrap gap-3"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{ddays.map(d =&gt; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;div key={d.id} className={`flex items-center gap-3 px-4 py-3 rounded-2xl border transition-colors ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-white border-gray-100 shadow-sm'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="text-center min-w-[50px] border-r border-gray-100 dark:border-slate-800 pr-3"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;p className="text-xs font-black text-indigo-500"&gt;{calculateDday(d.date)}&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="flex-1 min-w-0"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;p className="text-xs font-bold truncate"&gt;{d.title}&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;p className="text-[10px] text-gray-400"&gt;{d.date}&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button onClick={() =&gt; setDdays(ddays.filter(item =&gt; item.id !== d.id))} className="text-gray-300 hover:text-red-500 transition-colors"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;Icon name="Trash2" size={14} strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>))}</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{/* 디데이 추가 폼 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className={`w-full p-5 rounded-3xl border-2 border-dashed transition-colors ${darkMode ? 'border-slate-700' : 'border-gray-200'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;div className="flex flex-col gap-3"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;input<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>type="text"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>placeholder="일정 이름 (예: 여름방학)"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>value={newDdayTitle}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>onChange={(e) =&gt; setNewDdayTitle(e.target.value)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>className="bg-transparent text-sm font-bold outline-none border-b border-gray-100 dark:border-slate-700 pb-1"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>/&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="flex gap-2"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;input<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>type="date"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>value={newDdayDate}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>onChange={(e) =&gt; setNewDdayDate(e.target.value)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>className="flex-1 bg-transparent text-xs font-bold outline-none cursor-pointer dark:text-white"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>/&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;button onClick={addDday} className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl text-xs font-black shadow-md active:scale-95 transition-transform"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>추가</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/section&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{/* 오늘의 도전 목록 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;section className="space-y-4"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className="flex justify-between items-center px-1"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3 className="text-xs font-black text-gray-400 uppercase tracking-widest"&gt;오늘의 도전&lt;/h3&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span className="text-[10px] font-bold text-indigo-500"&gt;{userChallenges.filter(c=&gt;c.completedToday).length}/{userChallenges.length} 완료&lt;/span&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s1"><span class="Apple-converted-space">                  </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className="space-y-3"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{userChallenges.map(c =&gt; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;div key={c.id}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>onClick={() =&gt; toggleChallenge(c.id)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>className={`group cursor-pointer p-5 rounded-[30px] border-2 transition-all flex justify-between items-center</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>${c.completedToday<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>? 'bg-emerald-50 border-emerald-200 dark:bg-emerald-950/20 dark:border-emerald-900/50'<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>: (darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100 shadow-sm')}`}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="flex items-center gap-4"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>${c.completedToday ? 'bg-emerald-500 text-white' : 'bg-gray-100 dark:bg-slate-800 text-transparent'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;Icon name="Check" size={18} strokeWidth={4} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;span className={`font-bold text-lg ${c.completedToday ? 'text-emerald-700 dark:text-emerald-300 line-through opacity-50' : ''}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{c.title}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/span&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>{!c.isDefault &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>onClick={(e) =&gt; { e.stopPropagation(); setUserChallenges(userChallenges.filter(item =&gt; item.id !== c.id)); }}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>className="p-2 text-gray-300 hover:text-red-500 transition-colors"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;Icon name="Trash2" size={18} strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>))}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/section&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{/* 새로운 도전 추가 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;section className={`p-6 rounded-[32px] border transition-colors ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-indigo-50 border-indigo-100'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;p className="text-xs font-black text-indigo-400 uppercase tracking-widest mb-4"&gt;나만의 도전 추가&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className="flex gap-2"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>type="text"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>placeholder="예: 우유 다 마시기"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>value={newChallengeTitle}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>onChange={(e) =&gt; setNewChallengeTitle(e.target.value)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>onKeyPress={(e) =&gt; e.key === 'Enter' &amp;&amp; addChallenge()}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>className="flex-1 p-4 bg-white dark:bg-slate-900 rounded-2xl outline-none text-sm font-bold border border-transparent focus:border-indigo-500 transition-all shadow-sm"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>/&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button onClick={addChallenge} className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 rounded-2xl font-black shadow-lg shadow-indigo-200 dark:shadow-none active:scale-95 transition-transform"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;Icon name="Plus" size={24} strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/section&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>)}</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>{activeTab === 'settings' &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div className="space-y-8"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;section className="space-y-4"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;h3 className="text-xs font-black text-gray-400 px-1 uppercase tracking-widest"&gt;학교 설정&lt;/h3&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className={`p-6 rounded-[32px] space-y-4 border transition-colors ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100 shadow-xl'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>{mySchool ? (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;div className="bg-indigo-600 text-white p-5 rounded-3xl flex justify-between items-center shadow-lg animate-in zoom-in-95"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="space-y-1"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;p className="text-[10px] font-black opacity-70 uppercase"&gt;CURRENTLY ACTIVE&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;h4 className="text-lg font-black"&gt;{mySchool.name}&lt;/h4&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;p className="text-[10px] opacity-60 font-bold"&gt;{mySchool.address}&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;button onClick={() =&gt; { setMySchool(null); setSchoolNameInput(""); }} className="p-3 bg-white/20 hover:bg-white/30 rounded-2xl transition-all"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;Icon name="RefreshCw" size={20} strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>) : (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;div className="space-y-4"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div className="flex gap-2"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;select<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>onChange={(e) =&gt; setRegionCode(e.target.value)}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>value={regionCode}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>className="p-3.5 bg-gray-50 dark:bg-slate-900 rounded-2xl outline-none text-sm font-bold border border-gray-200 dark:border-slate-800 min-w-[100px] dark:text-white"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;option value=""&gt;지역 선택&lt;/option&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{regions.map(r =&gt; &lt;option key={r.code} value={r.code}&gt;{r.name}&lt;/option&gt;)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/select&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;div className="flex-1 relative"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;input<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>type="text"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>placeholder="학교명 입력"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>value={schoolNameInput}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>onChange={(e) =&gt; setSchoolNameInput(e.target.value)}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>onKeyPress={(e) =&gt; e.key === 'Enter' &amp;&amp; searchSchool()}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>className="w-full p-3.5 pr-12 bg-gray-50 dark:bg-slate-900 rounded-2xl outline-none text-sm font-bold border border-gray-200 dark:border-slate-800 focus:border-indigo-500 dark:text-white"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>/&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;button onClick={searchSchool} className="absolute right-2 top-1.5 p-2 bg-indigo-600 text-white rounded-xl active:scale-95 transition-all"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>{isSearching ? &lt;Icon name="Loader2" size={18} className="animate-spin" /&gt; : &lt;Icon name="Search" size={18} strokeWidth={1.5} /&gt;}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>{searchResults.length &gt; 0 &amp;&amp; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;div className="mt-4 space-y-2 max-h-64 overflow-y-auto pr-1 custom-scrollbar animate-in slide-in-from-bottom-2"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>{searchResults.map((s, i) =&gt; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>key={i}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>onClick={() =&gt; { setMySchool(s); setSearchResults([]); setActiveTab('school'); }}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>className="w-full text-left p-4 bg-gray-50 dark:bg-slate-900 border border-transparent hover:border-indigo-300 rounded-2xl transition-all group flex justify-between items-center"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;span className="text-[10px] font-black text-indigo-500"&gt;{s.type}&lt;/span&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;h5 className="text-sm font-bold dark:text-white"&gt;{s.name}&lt;/h5&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;p className="text-[10px] text-gray-400 font-medium"&gt;{s.address}&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;Icon name="CheckCircle2" size={16} className="text-gray-200 dark:text-gray-700 group-hover:text-indigo-500 transition-colors" strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                              </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>))}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/section&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{/* 선호 메뉴 설정 */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;section className="space-y-4"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className="flex items-center gap-2 px-1"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;Icon name="BellRing" size={14} className="text-orange-500" strokeWidth={1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3 className="text-xs font-black text-gray-400 uppercase tracking-widest"&gt;좋아하는 메뉴 알림&lt;/h3&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;div className={`p-6 rounded-[32px] space-y-4 border transition-colors ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100 shadow-xl'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="flex gap-2"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;input<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>type="text"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>placeholder="예: 치킨"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>value={newFoodInput}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>onChange={(e) =&gt; setNewFoodInput(e.target.value)}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>onKeyPress={(e) =&gt; e.key === 'Enter' &amp;&amp; (setFavoriteFoods([...new Set([...favoriteFoods, newFoodInput.trim()])]), setNewFoodInput(""))}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>className="flex-1 p-3.5 bg-gray-50 dark:bg-slate-900 rounded-2xl outline-none text-sm font-bold border border-gray-200 dark:border-slate-800 focus:border-orange-300 dark:text-white"<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>/&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;button onClick={() =&gt; { if(newFoodInput.trim()) { setFavoriteFoods([...new Set([...favoriteFoods, newFoodInput.trim()])]); setNewFoodInput(""); } }} className="bg-orange-50 hover:bg-orange-600 text-white px-5 rounded-2xl font-bold text-xs shadow-lg active:scale-95 transition-transform"&gt;추가&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="flex flex-wrap gap-2 mt-2"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>{favoriteFoods.map(food =&gt; (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>key={food}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>onClick={() =&gt; openFoodModal({ name: food, allergies: [] })}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>className="flex items-center gap-1.5 px-3 py-1.5 bg-orange-50 dark:bg-orange-950/20 text-orange-600 dark:text-orange-400 rounded-full text-xs font-bold border border-orange-100 cursor-pointer hover:bg-orange-100 dark:hover:bg-orange-950/40 transition-colors"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>{food}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>onClick={(e) =&gt; { e.stopPropagation(); setFavoriteFoods(favoriteFoods.filter(f =&gt; f !== food)); }}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>className="hover:text-orange-800 dark:hover:text-orange-300 p-0.5"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;Icon name="Plus" size={14} className="rotate-45 text-orange-400" strokeWidth={2} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                          </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>))}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/section&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/main&gt;</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{/* Navigation */}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>{!isExploded ? (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;nav className={`fixed bottom-0 left-0 right-0 max-w-md mx-auto border-t px-6 py-4 flex justify-around items-center z-20 rounded-t-[40px] shadow-2xl transition-colors ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-gray-100'}`}&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>{[</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 'settings', label: '설정', icon: 'settings' },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 'school', label: '급식', icon: 'school' },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>{ id: 'challenge', label: '도전', icon: 'trophy' },</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>].map((item) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>const isActive = activeTab === item.id;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>const IconComponent = item.icon;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>return (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;button<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>key={item.id}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>onClick={() =&gt; handleTabSwitch(item.id)}<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>className={`relative flex items-center justify-center transition-all duration-300 px-4 py-2 rounded-2xl</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>${isActive<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>? (darkMode ? 'bg-slate-800 text-white w-28' : 'bg-slate-100 text-slate-800 w-28')<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>: 'text-gray-300 w-12'}`}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div className="flex items-center gap-2"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>&lt;Icon name={IconComponent} size={24} strokeWidth={isActive ? 2 : 1.5} /&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                      </span>{isActive &amp;&amp; &lt;span className="text-[13px] font-normal animate-in fade-in slide-in-from-left-2"&gt;{item.label}&lt;/span&gt;}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                  </span>&lt;/button&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>})}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/nav&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>) : (</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div className="fixed bottom-12 left-1/2 -translate-x-1/2 bg-red-600 text-white px-10 py-5 rounded-[32px] font-black shadow-2xl animate-bounce z-50 flex items-center space-x-4 border-4 border-white/20"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;span className="text-2xl"&gt;🤡&lt;/span&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div className="text-left"&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p className="text-xs opacity-80 uppercase font-black"&gt;만우절&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p className="text-sm"&gt;버튼이 펑! 속았지롱!&lt;/p&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">          </span>)}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span>);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p5"><span class="s7"></span><br></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>// React 18 createRoot 렌더링 방식 적용</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>const root = ReactDOM.createRoot(document.getElementById('root'));</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>root.render(&lt;App /&gt;);</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
+<p class="p1"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+</body>
+</html>
